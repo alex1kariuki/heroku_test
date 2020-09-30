@@ -1,13 +1,12 @@
 const express = require('express');
 const app = express();
-
+const port = process.env.PORT || 3000;
 
 // Default route
-app.use((req, res, next) => {
-    res.json({
-        message: 'You are using V1 of the Storim API'
-    })
-    next();
-});
+app.get('/', (req,res)=>{
+    res.send('Hello World')
+})
 
-module.exports = app;
+app.listen(port, ()=>{
+    console.log(`Running on port http://localhost:${port}`)
+})
