@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 
 const server = http.createServer(app);
 
-console.log('Listening on port: ' + port);
+console.log('Listening on port allocated port: ' + port);
 
 server.listen(port);
 server.timeout = 1000;
